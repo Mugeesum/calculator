@@ -1,0 +1,29 @@
+actor CALCULATOR{
+var key: Int= 0;
+
+public func Adition(n : Int) : async Int{
+  key += n;
+  key
+};
+public func Substraction(n : Int) : async Int {
+  key -= n;
+  key
+};
+public func Multiplication(n : Int) : async Int {
+  key *= n;
+  key
+};
+public func Division(n : Int) : async ?Int {
+  if (n == 0) {
+   null
+  }else {
+    key /= n;
+    ?key
+  };
+};
+public func Clear() :async () {
+  key := 0;
+};
+
+
+};
